@@ -1,0 +1,257 @@
+* {
+    background-color: rgb(190, 246, 255);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.user {
+    position: absolute;
+    bottom: 0px;
+    left: 35vw;
+    width: 30vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(255, 175, 143);
+}
+
+.pc {
+    position: absolute;
+    top: 0px;
+    left: 35vw;
+    width: 30vw;
+    height: 49vh;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+.option {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 15.5vh;
+    bottom: 10px;
+    justify-content: space-evenly;
+    background-color: rgb(255, 175, 143);
+    border-radius: 50px;
+}
+
+.user-rock,
+.user-paper,
+.user-scissors {
+    position: relative;
+    width: 75px;
+    height: 100px;
+    top: 7px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    background-color: rgb(255, 175, 143);
+}
+
+.user-rock:hover,
+.user-paper:hover,
+.user-scissors:hover {
+    transform: scale(1.1);
+}
+
+.selected {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 34vh;
+    background-color: rgb(255, 175, 143);
+
+}
+
+.users-rock,
+.users-paper,
+.users-scissors {
+    position: absolute;
+    width: 0px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    opacity: 0;
+    background-color: rgb(255, 175, 143)
+}
+
+.selectedPC {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 34vh;
+    background-color: aqua;
+}
+
+.pc-rock,
+.pc-paper,
+.pc-scissors {
+    margin-top: 15vh;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    width: 0px;
+    opacity: 0;
+    background-color: aqua;
+}
+
+.me,
+.comp {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    margin: 10px;
+    font-size: x-large;
+    background-color: transparent;
+}
+
+.vs {
+    position: absolute;
+    z-index: 1;
+    background-image: url("Assets for roshambo/vs.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    bottom: -8vh;
+    left: 11vw;
+}
+
+
+.play,.pc-won,.user-won {
+    z-index: 2;
+    position: absolute;
+    top: 30vh;
+    left: 37.5vw;
+    width: 25vw;
+    height: 40vh;
+    border: 2px solid rgb(0, 194, 129);
+    border-radius: 5px;
+    background-color: aquamarine;
+    justify-content: center;
+    box-shadow: 10px 5px 5px rgb(73, 73, 73);
+    transition: all 0.2s ease-in-out;
+}
+.pc-won,.user-won{
+    z-index: 0;
+    opacity: 0;
+}
+
+.play :nth-child(1),.pc-won :nth-child(1),.user-won :nth-child(1) {
+    top: 10vh;
+    left: 7.5vw;
+    position: absolute;
+    background-color: aquamarine;
+}
+
+.play :nth-child(2),.pc-won :nth-child(2),.user-won :nth-child(2) {
+    top: 15vh;
+    left: 5.5vw;
+    position: absolute;
+    background-color: rgb(179, 255, 230);
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+.play :nth-child(3),.pc-won :nth-child(3),.user-won :nth-child(3) {
+    top: 21vh;
+    left: 8.5vw;
+    position: absolute;
+    background-color: rgb(134, 210, 255);
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.play :nth-child(3):hover,.user-won :nth-child(3):hover,.pc-won :nth-child(3):hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.pc-won {
+    z-index: 0;
+}
+.pc-won :nth-child(2){
+    background-color: aquamarine;
+    left: 8vw;
+}
+.pc-won :nth-child(3){
+    left: 9.5vw;
+}
+.user-won :nth-child(1){
+    left: 7.5vw;
+    font-size:30px;
+}
+
+.user-won :nth-child(2){
+    background-color: aquamarine;
+    left: 9vw;
+    font-size:25px;
+}
+.user-won :nth-child(3){
+    left: 9vw;
+}
+
+.reset-btn{
+    position: absolute;
+    bottom: 10px;
+    left: 28vw;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: large;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+.reset-btn:hover{
+    transform: scale(1.1);
+}
+@media (max-width:440px){
+    .user {
+        left: 0vw;
+        width: 100%;
+    }
+    .pc {
+        top: 0;
+        left: 0vw;
+        width: 100%;
+    }
+    .vs {
+       opacity: 0;
+    }
+    .play,.pc-won,.user-won {
+        z-index: 0;
+        opacity: 0;
+        top: 30vh;
+        left: 0vw;
+        width: 100%;
+    }
+    .reset-btn{
+        z-index: 1;
+        position: absolute;
+        bottom: 100vw;
+        left: 73vw;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: large;
+        background-color: aquamarine;
+        cursor: pointer;
+    }
+}

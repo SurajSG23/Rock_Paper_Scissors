@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Assets for roshambo/scissors-user.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="reset">
+        <button class="reset-btn" onclick="playAgain()">Reset</button>
+    </div>
+    <div class="play">
+        <h2>Set Objective: </h2>
+        <input type="number" name="" id="Objective">
+        <button onclick="play()">Play</button>
+    </div>
+    <div class="pc-won">
+        <h2>Computer Won</h2>
+        <h4>Better luck next time</h4>
+        <button onclick="playAgain()">PlayAgain</button>
+    </div>
+    <div class="user-won">
+        <h2>Congrats!!!</h2>
+        <h4>You won</h4>
+        <button onclick="playAgain()">PlayAgain</button>
+    </div>
+
+    <div class="container">
+        <div class="pc">
+            <h3 class="comp">Computer Score: </h3>
+            <div class="selectedPC">
+                <img src="Assets for roshambo/rock-pc.png" alt="" class="pc-rock">
+                <img src="Assets for roshambo/paper-pc.png" alt="" class="pc-paper">
+                <img src="Assets for roshambo/scissors-pc.png" alt="" class="pc-scissors" >
+            </div>
+            <div class="vs">
+            </div>
+        </div>
+        <div class="user">
+            <h3 class="me">My Score: </h3>
+            <div class="selected">
+                <img src="Assets for roshambo/rock-user.png" alt="" class="users-rock">
+                <img src="Assets for roshambo/paper-user.png" alt="" class="users-paper">
+                <img src="Assets for roshambo/scissors-user.png" alt="" class="users-scissors">
+            </div>
+            <div class="option">
+                <img src="Assets for roshambo/rock-user.png" alt="" class="user-rock" onclick="rockF()">
+                <img src="Assets for roshambo/paper-user.png" alt="" class="user-paper" onclick="paperF()">
+                <img src="Assets for roshambo/scissors-user.png" alt="" class="user-scissors" onclick="scissorsF()">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
